@@ -26,7 +26,7 @@ class WebHook {
 		if ($url === null)
 			$url = '';
 		
-		$params = array("url", $url);
+		$params = array("url" => $url);
 		
 		$connector->request("setWebhook", $params);
 	}
@@ -36,7 +36,12 @@ class WebHook {
 	 */
 	public static function analyse(iReceiver $receiver) {
 		$raw_result = file_get_contents('php://input');
-				
+		
+		if (trim($raw_result) == '') {
+			$receiver->onError("No data found");
+			return;
+		}
+		
 		try {
 			$result = json_decode($raw_result, true);
 			
