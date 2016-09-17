@@ -1,7 +1,7 @@
 <?php
 	/**
-		Displays every Request from the server
-	*/
+	  *	Displays every Request from the server
+	  */
 	
 	require_once("../lib/Connector.class.php");
 	require_once("../lib/LongPolling.class.php");
