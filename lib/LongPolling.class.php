@@ -63,8 +63,7 @@ class LongPoll {
 	}	
 	
 	protected function doPoll() {
-		echo "Executed";
-		
+	
 		$params = array(
 		  'limit' => $this->pollingLimit,
 		  'timeout' => $this->pollingTimeout,
