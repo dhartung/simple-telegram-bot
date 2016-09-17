@@ -1,6 +1,6 @@
 <?php
 	require_once("Connector.class.php");
-	require_once("iReplyMarkup.class.php");
+	require_once("Types/iReplyMarkup.class.php");
 
 
 	/**
